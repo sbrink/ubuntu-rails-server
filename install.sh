@@ -16,6 +16,7 @@ apt-add-repository ppa:brightbox/ruby-ng
 apt-get update
 apt-get -y install ruby1.9.3
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+gem install bundler
 
 # nginx with passenger
 apt-get -y install nginx-full
