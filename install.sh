@@ -1,9 +1,14 @@
+#!/bin/bash
+
 # cleanup
 locale-gen de_DE.UTF-8
 apt-get -y --purge remove apache2* samba smbfs
 apt-get update
 apt-get upgrade -y
 apt-get -y install build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev libcurl4-openssl-dev
+
+# git
+apt-get -y install git-core
 
 # ruby
 apt-get -y install python-software-properties
