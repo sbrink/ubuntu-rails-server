@@ -1,0 +1,1 @@
+wget -O - https://raw.github.com/sbrink/ubuntu-rails-server/master/install.sh | sh
