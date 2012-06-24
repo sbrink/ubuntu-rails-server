@@ -19,12 +19,15 @@ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 
 # nginx with passenger
+apt-add-repository ppa:brightbox/passenger-nginx
 apt-get -y install nginx-full
 echo "passenger_root /usr/lib/phusion-passenger;" > /etc/nginx/conf.d/passenger.conf
+gem install passenger
 /etc/init.d/nginx start
-
-# postgres
-apt-get -y install postgresql postgresql-9.1-postgis libpq-dev
 
 # libs for rmagick
 apt-get -y install libmagickwand-dev
+
+# postgres
+apt-get -y install postgresql postgresql-9.1-postgis libpq-dev
+echo "\password postgres" | sudo -u postgres psql postgres
